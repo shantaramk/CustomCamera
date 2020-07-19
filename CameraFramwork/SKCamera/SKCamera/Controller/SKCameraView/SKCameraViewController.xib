@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SKCameraViewController" customModule="ButtonExtension" customModuleProvider="target">
+            <connections>
+                <outlet property="captureButton" destination="mZ0-rr-vhM" id="wjp-Dx-llF"/>
+                <outlet property="captureImageView" destination="abz-bo-eax" id="Wq4-mJ-VLt"/>
+                <outlet property="previewView" destination="q8m-5v-2Ti" id="5mu-sM-pM4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HcE-vq-g9C">
+                    <rect key="frame" x="16" y="60" width="382" height="786"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="gqc-jK-BvV">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="656"/>
+                            <subviews>
+                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="emt-N2-4wa">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="0.0"/>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8m-5v-2Ti">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="656"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ygi-Yk-dQx">
+                            <rect key="frame" x="0.0" y="686" width="382" height="100"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="abz-bo-eax">
+                                    <rect key="frame" x="0.0" y="10" width="80" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="7cV-PC-PIN"/>
+                                        <constraint firstAttribute="height" constant="80" id="QOo-G3-7TM"/>
+                                        <constraint firstAttribute="width" constant="80" id="iS7-ar-gFg"/>
+                                        <constraint firstAttribute="width" secondItem="abz-bo-eax" secondAttribute="height" multiplier="1:1" id="rQE-gL-vs0"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="7cV-PC-PIN"/>
+                                            <exclude reference="rQE-gL-vs0"/>
+                                        </mask>
+                                    </variation>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ0-rr-vhM">
+                                    <rect key="frame" x="146" y="0.0" width="100" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="8eT-hs-vn0"/>
+                                        <constraint firstAttribute="width" constant="100" id="yZh-p3-cVH"/>
+                                    </constraints>
+                                    <state key="normal" image="capture">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="captureButtonClicked" destination="-1" eventType="touchUpInside" id="YLq-aU-AfK"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBF-E9-8uX">
+                                    <rect key="frame" x="322" y="39" width="60" height="22"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="yNx-ax-pGc"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" image="camera.rotate.fill" catalog="system">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="medium"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="switchCameraClicked" destination="-1" eventType="touchUpInside" id="5zd-0V-fpT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="abz-bo-eax" firstAttribute="leading" secondItem="ygi-Yk-dQx" secondAttribute="leading" id="RZm-V4-ES9"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HcE-vq-g9C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="H7K-Li-daa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HcE-vq-g9C" secondAttribute="bottom" constant="16" id="PVH-XO-8EC"/>
+                <constraint firstItem="HcE-vq-g9C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="obZ-z5-0kY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HcE-vq-g9C" secondAttribute="trailing" constant="16" id="q2M-gg-9HP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera.rotate.fill" catalog="system" width="64" height="48"/>
+        <image name="capture" width="96" height="96"/>
+    </resources>
+</document>

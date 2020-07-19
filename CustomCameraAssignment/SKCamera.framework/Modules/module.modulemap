@@ -1,0 +1,11 @@
+framework module SKCamera {
+  umbrella header "SKCamera.h"
+
+  export *
+  module * { export * }
+}
+
+module SKCamera.Swift {
+    header "SKCamera-Swift.h"
+    requires objc
+}

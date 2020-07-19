@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomCameraAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jMS-Yq-VF0">
+                                <rect key="frame" x="40" y="104" width="334" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="WBQ-oP-m0F"/>
+                                    <constraint firstAttribute="height" constant="250" id="YGw-tM-SYt"/>
+                                    <constraint firstAttribute="width" constant="334" id="aQa-uT-7OH"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WBQ-oP-m0F"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzU-DJ-2xP">
+                                <rect key="frame" x="137" y="374" width="140" height="48"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="po1-5P-YEk"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="rNV-Tm-hjF"/>
+                                </constraints>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureButtonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpy-NE-NB5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OzU-DJ-2xP" firstAttribute="top" secondItem="jMS-Yq-VF0" secondAttribute="bottom" constant="20" id="9s0-c0-eu4"/>
+                            <constraint firstItem="jMS-Yq-VF0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Lgo-LC-7sf"/>
+                            <constraint firstItem="jMS-Yq-VF0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ifM-JU-4xV"/>
+                            <constraint firstItem="OzU-DJ-2xP" firstAttribute="centerX" secondItem="jMS-Yq-VF0" secondAttribute="centerX" id="nH6-Cs-lhs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="captureButton" destination="OzU-DJ-2xP" id="Ine-bM-caD"/>
+                        <outlet property="captureImageView" destination="jMS-Yq-VF0" id="dv3-OR-5z4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+</document>
