@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C2388E524BDE1A900174FBF /* SKCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2388E324BDE1A900174FBF /* SKCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C23890724BDFA5B00174FBF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23890624BDFA5B00174FBF /* UIImage+Extension.swift */; };
 		4C5B3C2524C21766000EE699 /* SKImageViewerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C5B3C1C24C21766000EE699 /* SKImageViewerController.xib */; };
 		4C5B3C2624C21766000EE699 /* SKImageViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B3C1D24C21766000EE699 /* SKImageViewerController.swift */; };
 		4C5B3C2724C21766000EE699 /* SKCameraViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B3C1F24C21766000EE699 /* SKCameraViewController+Delegate.swift */; };
@@ -18,13 +17,13 @@
 		4C5B3C2B24C21766000EE699 /* SKCameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B3C2324C21766000EE699 /* SKCameraManager.swift */; };
 		4C5B3C2C24C21766000EE699 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B3C2424C21766000EE699 /* RoundedShadowButton.swift */; };
 		4C5B3C3424C21B3B000EE699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C5B3C3324C21B3B000EE699 /* Assets.xcassets */; };
+		4C5C00A224C5B500002793FF /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5C00A124C5B500002793FF /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C2388E024BDE1A900174FBF /* SKCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2388E324BDE1A900174FBF /* SKCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKCamera.h; sourceTree = "<group>"; };
 		4C2388E424BDE1A900174FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C23890624BDFA5B00174FBF /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		4C5B3C1C24C21766000EE699 /* SKImageViewerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SKImageViewerController.xib; sourceTree = "<group>"; };
 		4C5B3C1D24C21766000EE699 /* SKImageViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKImageViewerController.swift; sourceTree = "<group>"; };
 		4C5B3C1F24C21766000EE699 /* SKCameraViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKCameraViewController+Delegate.swift"; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		4C5B3C2324C21766000EE699 /* SKCameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCameraManager.swift; sourceTree = "<group>"; };
 		4C5B3C2424C21766000EE699 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		4C5B3C3324C21B3B000EE699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C5C00A124C5B500002793FF /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,22 +66,13 @@
 		4C2388E224BDE1A900174FBF /* SKCamera */ = {
 			isa = PBXGroup;
 			children = (
+				4C5C00A024C5B500002793FF /* Extension */,
 				4C5B3C3224C21B30000EE699 /* Assets */,
 				4C5B3C1A24C21766000EE699 /* Controller */,
-				4C23890524BDFA5B00174FBF /* Extension */,
 				4C2388E324BDE1A900174FBF /* SKCamera.h */,
 				4C2388E424BDE1A900174FBF /* Info.plist */,
 			);
 			path = SKCamera;
-			sourceTree = "<group>";
-		};
-		4C23890524BDFA5B00174FBF /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				4C23890624BDFA5B00174FBF /* UIImage+Extension.swift */,
-			);
-			name = Extension;
-			path = ../../ButtonExtension/ButtonExtension/Extension;
 			sourceTree = "<group>";
 		};
 		4C5B3C1A24C21766000EE699 /* Controller */ = {
@@ -122,6 +113,14 @@
 			);
 			name = Assets;
 			path = Controller/Assets;
+			sourceTree = "<group>";
+		};
+		4C5C00A024C5B500002793FF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C5C00A124C5B500002793FF /* UIImage+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5B3C2C24C21766000EE699 /* RoundedShadowButton.swift in Sources */,
-				4C23890724BDFA5B00174FBF /* UIImage+Extension.swift in Sources */,
+				4C5C00A224C5B500002793FF /* UIImage+Extension.swift in Sources */,
 				4C5B3C2A24C21766000EE699 /* SKCameraViewController+UI.swift in Sources */,
 				4C5B3C2B24C21766000EE699 /* SKCameraManager.swift in Sources */,
 				4C5B3C2824C21766000EE699 /* SKCameraViewController.swift in Sources */,
